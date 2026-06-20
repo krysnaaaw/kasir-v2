@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --cream-50: #fdfaf4;
+  --cream-100: #faf3e0;
+  --cream-200: #f5e6c0;
+  --wood-500: #8b5e3c;
+  --wood-600: #6b4226;
+  --wood-700: #4a2c14;
+  --wood-800: #2d1a08;
+  --gold-400: #f4c842;
+  --gold-500: #e6a817;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fdfaf4;
+  color: #2d1a08;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #faf3e0; }
+::-webkit-scrollbar-thumb { background: #d4a574; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8b5e3c; }
+
+/* Classic card style */
+.card-classic {
+  @apply bg-white rounded-xl shadow-sm border border-cream-200;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-wood-700 hover:bg-wood-800 text-cream-100 font-body font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-cream-100 hover:bg-cream-200 text-wood-700 font-body font-semibold px-5 py-2.5 rounded-lg border border-cream-300 transition-all duration-200 active:scale-95;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white font-body font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 active:scale-95;
+}
+
+.btn-gold {
+  @apply bg-gold-500 hover:bg-gold-600 text-wood-900 font-body font-bold px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+}
+
+/* Input styles */
+.input-classic {
+  @apply w-full px-4 py-2.5 bg-cream-50 border border-cream-300 rounded-lg text-wood-800 placeholder-wood-400 focus:outline-none focus:ring-2 focus:ring-wood-500 focus:border-transparent transition-all font-body text-sm;
+}
+
+/* Table styles */
+.table-classic th {
+  @apply bg-wood-800 text-cream-100 text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider;
+}
+.table-classic td {
+  @apply px-4 py-3 text-sm text-wood-700 border-b border-cream-100;
+}
+.table-classic tr:hover td {
+  @apply bg-cream-50;
+}
+
+/* Badge styles */
+.badge-success { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800; }
+.badge-warning { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800; }
+.badge-danger  { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-800; }
+.badge-info    { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800; }
+.badge-wood    { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-wood-100 text-wood-800; }
+
+/* Skeleton loading */
+.skeleton {
+  @apply animate-pulse bg-cream-200 rounded;
+}
+
+/* Sidebar transitions */
+.sidebar-enter { transform: translateX(-100%); }
+.sidebar-enter-active { transform: translateX(0); transition: transform 300ms ease; }
+.sidebar-exit { transform: translateX(0); }
+.sidebar-exit-active { transform: translateX(-100%); transition: transform 300ms ease; }
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; font-size: 12px; }
+}
