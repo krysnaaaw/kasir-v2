@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import toast from 'react-hot-toast';
-import api from '../../services/api';
-import { useCart } from '../../context/CartContext';
-import { formatRupiah, getImageUrl, saveOfflineTransaction } from '../../utils/helpers';
+import api from '../services/api';
+import { useCart } from '../context/CartContext';
+import { formatRupiah, getImageUrl, saveOfflineTransaction } from '../utils/helpers';
 
 const METODE = [
   { value: 'tunai',    label: 'Tunai',        icon: '💵' },

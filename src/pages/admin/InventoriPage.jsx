@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import toast from 'react-hot-toast';
 import JsBarcode from 'jsbarcode';
-import api from '../../services/api';
-import { formatRupiah, getStockStatus, getImageUrl } from '../../utils/helpers';
+import api from '../services/api';
+import { formatRupiah, getStockStatus, getImageUrl } from '../utils/helpers';
 
 // Modal Component
 const Modal = ({ open, onClose, title, children }) => (

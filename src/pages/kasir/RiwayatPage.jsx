@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import toast from 'react-hot-toast';
-import api from '../../services/api';
-import { formatRupiah, formatDate, getMetodeLabel, getOfflineTransactions } from '../../utils/helpers';
-import { useAuth } from '../../context/AuthContext';
+import api from '../services/api';
+import { formatRupiah, formatDate, getMetodeLabel, getOfflineTransactions } from '../utils/helpers';
+import { useAuth } from '../context/AuthContext';
 
 const Modal = ({ open, onClose, title, children, size = 'lg' }) => (
   <AnimatePresence>
